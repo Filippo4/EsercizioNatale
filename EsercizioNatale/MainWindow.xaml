@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <ListView x:Name="lsv_lista" HorizontalAlignment="Left" Height="291" Margin="47,55,0,0" VerticalAlignment="Top" Width="225" RenderTransformOrigin="0.5,0.5" SelectionChanged="ListView_SelectionChanged">
+            <ListView.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="1.185"/>
+                    <RotateTransform Angle="-0.796"/>
+                    <TranslateTransform X="1.365" Y="-0.016"/>
+                </TransformGroup>
+            </ListView.RenderTransform>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btn_importa" Content="Importa" HorizontalAlignment="Left" Margin="355,59,0,0" VerticalAlignment="Top" Width="143" Height="38" Click="btn_importa_Click"/>
+
     </Grid>
 </Window>

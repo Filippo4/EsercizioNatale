@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,23 @@ namespace EsercizioNatale
         public MainWindow()
         {
             InitializeComponent();
+        }
+        private void btn_importa_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                StreamReader sr = new StreamReader("FileValido.txt");
+                string line = sr.ReadLine();
+                while ((line = sr.ReadLine()) != null)
+                {
+                    
+                    lsv_lista.Items.Add(line);
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 }
